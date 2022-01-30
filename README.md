@@ -16,3 +16,13 @@ The objective of this project is to create a clone of the popular game "Wordle",
     - If the guessed letter is correct, and in the correct position, change the background to green.
     - If their letter appears in the word, but is in the wrong location, change the block to yellow.
     - If their letter does not appear in the word at all, change the block to black (or red?).
+  - Each guess will also alter the appearance of a keyboard layout, the colour coding the same as above.
+  - Tallies how many guesses it took the user to get the correct answer (or not) and produce a histogram of their previous game scores.
+
+## Scopes for Expansion:
+
+- Add a dictionary API. Select a random 5-letter word from the dictionary rather than generating a random 5-letter string.
+- Add code so that if the user's guess is not in the dictionary, prevent them from making that guess and wasting a turn.
+- Add the ability to remember the users' score from game-to-game.
+- Add the ability to change whether the word is a 4, 5, 6 or 7-letter word.
+- Add the ability to change the number of maximum guesses a user can make (up to 12 guesses or so?)
