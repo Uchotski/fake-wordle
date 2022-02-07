@@ -2,6 +2,16 @@
 @import "helpers/placeholders";
 @import "helpers/variables";
 
+$key-margin: 3px;
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+    -moz-border-radius: $radius;
+    -o-border-radius: $radius;
+    -ms-border-radius: $radius;
+    -webkit-border-radius: $radius;
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -17,4 +27,21 @@ html, body {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-auto-rows: auto;
+}
+
+#user-input {
+    width: 100%;
+    text-align: center;
+    .row {
+        width: 100%;
+        display: block;
+        div {
+            background: gray;
+            color: white;
+            width: 10%;
+            height: 15%;
+            margin: $key-margin;
+            @include border-radius(5px);
+        }
+    }
 }

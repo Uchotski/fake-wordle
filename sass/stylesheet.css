@@ -15,4 +15,25 @@ html, body {
   grid-auto-rows: auto;
 }
 
+#user-input {
+  width: 100%;
+  text-align: center;
+}
+#user-input .row {
+  width: 100%;
+  display: block;
+}
+#user-input .row div {
+  background: gray;
+  color: white;
+  width: 10%;
+  height: 15%;
+  margin: 3px;
+  border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -webkit-border-radius: 5px;
+}
+
 /*# sourceMappingURL=stylesheet.css.map */
