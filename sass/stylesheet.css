@@ -21,12 +21,12 @@ html, body {
 }
 #user-input .row {
   width: 100%;
-  display: block;
 }
 #user-input .row div {
+  display: inline;
   background: gray;
   color: white;
-  width: 10%;
+  width: calc(10% - 6px);
   height: 15%;
   margin: 3px;
   border-radius: 5px;
