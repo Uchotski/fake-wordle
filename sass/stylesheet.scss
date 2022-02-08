@@ -34,11 +34,11 @@ html, body {
     text-align: center;
     .row {
         width: 100%;
-        display: block;
         div {
+            display: inline;
             background: gray;
             color: white;
-            width: 10%;
+            width: calc(10% - ($key-margin * 2));
             height: 15%;
             margin: $key-margin;
             @include border-radius(5px);
