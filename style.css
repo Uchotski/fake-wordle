@@ -71,6 +71,9 @@ article {
     flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #555;
 }
 
 #game-grid .row {
