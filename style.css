@@ -24,7 +24,7 @@ h1 {
 
 header {
     text-align: center;
-    padding: 20px;
+    padding: 5px;
     width: 100%;
     border-bottom: 1px solid gray;
 }
@@ -60,6 +60,35 @@ nav a:hover {
 article {
     width: 100%;
     padding: 0 20%;
+    height: calc(100vh - 93px);
+}
+
+/* Game area */
+#game-grid {
+    display: flex;
+    padding: 7px;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#game-grid .row {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#game-grid .row div {
+    border: 3px solid lightgray;
+    margin: 3px;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
 }
 
 /* Keyboard formatting */
@@ -69,6 +98,8 @@ article {
     text-transform: uppercase;
     font-weight: 400;
     align-items: center;
+    width: 80%;
+    margin: auto;
 }
 
 #keyboard .row {
@@ -91,4 +122,12 @@ article {
 
 #keyboard .row div.bigbutton {
     width: calc(15% - 6px);
+}
+
+#keyboard .row div:active {
+    color: #fff;
+}
+
+#keyboard .row div:hover {
+    background: #bbb;
 }
