@@ -3,3 +3,91 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+/* UNIVERSAL STYLING */
+
+html, body {
+    background: #FFF;
+    font-family: Verdana, Arial, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Universal headers and links */
+
+h1 {
+    font-size: 2em;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 20px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+/* NAVIGATION MENU */
+
+nav {
+    width: 100%;
+    text-align: center;
+    background: gray;
+    color: white;
+}
+
+nav li {
+    display: inline;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+nav a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+/* MAIN SITE SECTION */
+/* Article... */
+
+article {
+    width: 100%;
+    padding: 0 20%;
+}
+
+/* Keyboard formatting */
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 400;
+    align-items: center;
+}
+
+#keyboard .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#keyboard .row div {
+    background: #d4d4d4;
+    color: #555;
+    text-align: center;
+    border-radius: 10px;
+    width: calc(10% - 6px);
+    line-height: 50px;
+    margin: 3px;
+}
+
+#keyboard .row div.bigbutton {
+    width: calc(15% - 6px);
+}
