@@ -134,3 +134,22 @@ article {
 #keyboard .row div:hover {
     background: #bbb;
 }
+
+/* OVERLAY */
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    display: none;
+}
+
+#overlay-content {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+}
