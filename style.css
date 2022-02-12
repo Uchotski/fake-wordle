@@ -145,11 +145,33 @@ article {
     justify-content: center;
     align-items: center;
     z-index: 1;
-    display: none;
+    display: content;
 }
 
 #overlay-content {
     background: #fff;
     border-radius: 15px;
     padding: 20px;
+    position: relative;
+}
+
+#overlay-content .close-button {
+    position: absolute;
+    right: 5px;
+    top: -12.5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background: lightgray;
+    color: #555;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+}
+
+#overlay-content .close-button:hover {
+    color: red;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
 }
