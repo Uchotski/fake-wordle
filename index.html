@@ -1,32 +1,34 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Fwordle | A fake Wordle clone</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="UTF-8" />
-        <link rel="stylesheet" type="text/css" href="./style.css" />
-    </head>
 
-    <body>
-        <header>
-            <h1>Fwordle: A fake Wordle clone</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Scores</a></li>
-                <li><a href="#">Settings</a></li>
-                <li><a href="#">Feedback</a></li>
-            </ul>
-        </nav>
+<head>
+    <title>Fwordle | A fake Wordle clone</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
 
-        <article>
-            <!-- Game grid to go here -->
-            <section id="game-grid">
-            </section>
+<body>
+    <header>
+        <h1>Fwordle: A fake Wordle clone</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="#">Menu</a></li>
+            <li><a href="#">Scores</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </nav>
 
-            <!-- Keyboard area to go here -->
-            <section id="keyboard">
+    <article>
+        <!-- Game grid to go here -->
+        <section id="game-grid">
+        </section>
+
+        <!-- Keyboard area to go here -->
+        <section id="keyboard">
+            <div class="row">
                 <div>q</div>
                 <div>w</div>
                 <div>e</div>
@@ -37,6 +39,8 @@
                 <div>i</div>
                 <div>o</div>
                 <div>p</div>
+            </div>
+            <div class="row">
                 <div>a</div>
                 <div>s</div>
                 <div>d</div>
@@ -46,6 +50,8 @@
                 <div>j</div>
                 <div>k</div>
                 <div>l</div>
+            </div>
+            <div class="row">
                 <div>z</div>
                 <div>x</div>
                 <div>c</div>
@@ -53,7 +59,9 @@
                 <div>b</div>
                 <div>n</div>
                 <div>m</div>
-            </section>
-        </article>
-    </body>
+            </div>
+        </section>
+    </article>
+</body>
+
 </html>
