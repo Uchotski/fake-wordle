@@ -7,3 +7,4 @@ document.getElementById('menu').onclick = function() {
     document.getElementById('overlay').style.display = 'flex';
 }
 
+//Make the keyboard typeable...
