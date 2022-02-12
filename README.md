@@ -26,3 +26,19 @@ The objective of this project is to create a clone of the popular game "Wordle",
 - Add the ability to remember the users' score from game-to-game.
 - Add the ability to change whether the word is a 4, 5, 6 or 7-letter word.
 - Add the ability to change the number of maximum guesses a user can make (up to 12 guesses or so?)
+
+## Plan of Action:
+
+### Layout:
+- Header
+  - Does what it says on the tin. :O
+- Means of toggling game modes
+  - Button to make game modes appear? Show as an overlay?
+- Grid/play area
+  - Start with a 5x6 grid for input.
+  - If the game mode is altered, then alter the no. of columns.
+  - Styling should have each 'tile' as a square, the letter displayed should sit in the dead centre of the tile.
+- Keyboard/user input area
+  - Bottom of viewport
+  - Touchable keyboard for mobile, typeable if using a real keyboard.
+  - On touch or keystroke, make the keys change apperance.
