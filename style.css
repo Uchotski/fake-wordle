@@ -1,0 +1,176 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* UNIVERSAL STYLING */
+
+html, body {
+    background: #FFF;
+    font-family: Verdana, Arial, Geneva, Tahoma, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    width: 100%;
+}
+
+/* Universal headers and links */
+
+h1 {
+    font-size: 2em;
+}
+
+/* HEADER */
+
+header {
+    text-align: center;
+    padding: 5px;
+    width: 100%;
+    border-bottom: 1px solid gray;
+}
+
+/* NAVIGATION MENU */
+
+nav {
+    width: 100%;
+    text-align: center;
+    background: gray;
+    color: white;
+}
+
+nav li {
+    display: inline;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+nav a {
+    color: lightgray;
+    text-decoration: none;
+}
+
+nav a:hover {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+/* MAIN SITE SECTION */
+/* Article... */
+
+article {
+    width: 100%;
+    padding: 0 20%;
+    height: calc(100vh - 93px);
+}
+
+/* Game area */
+#game-grid {
+    display: flex;
+    padding: 7px;
+    margin: auto;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    font-weight: 700;
+    text-transform: capitalize;
+    color: #555;
+}
+
+#game-grid .row {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 100%;
+}
+
+#game-grid .row div {
+    border: 3px solid lightgray;
+    margin: 3px;
+    width: 54px;
+    height: 54px;
+    text-align: center;
+    line-height: 54px;
+}
+
+/* Keyboard formatting */
+#keyboard {
+    display: flex;
+    flex-direction: column;
+    text-transform: uppercase;
+    font-weight: 400;
+    align-items: center;
+    width: 80%;
+    margin: auto;
+}
+
+#keyboard .row {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+
+#keyboard .row div {
+    background: #d4d4d4;
+    color: #555;
+    text-align: center;
+    border-radius: 10px;
+    width: calc(10% - 6px);
+    line-height: 50px;
+    margin: 3px;
+    cursor: pointer;
+}
+
+#keyboard .row div.bigbutton {
+    width: calc(15% - 6px);
+}
+
+#keyboard .row div:active {
+    color: #fff;
+}
+
+#keyboard .row div:hover {
+    background: #bbb;
+}
+
+/* OVERLAY */
+#overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+#overlay-content {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+#overlay-content .close-button {
+    position: absolute;
+    right: 5px;
+    top: -12.5px;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background: lightgray;
+    color: #555;
+    border-radius: 50%;
+    z-index: 2;
+    cursor: pointer;
+    display: block;
+}
+
+#overlay-content .close-button:hover {
+    color: red;
+    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.2);
+}
