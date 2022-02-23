@@ -72,14 +72,6 @@ const startGame = () => {
         }
     }
 
-    //Function to change the style of the tiles...
-    const changeColor = (num) => {
-        const gameRow = document.getElementById('game-grid').children[row];
-        if (guess[num] == word[num]) {
-            gameRow.children[num].style.backgroundColor = 'red';
-        }
-    }
-
     //Game Variables:
     let col = 0;
     let row = 0;
