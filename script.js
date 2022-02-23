@@ -37,12 +37,12 @@ const startGame = () => {
             return col++;
         } else if (content == 'delete') {
             //If 'delete' is clicked...
-            if (col <= 0) { return; }
+            if (col <= 0) { return; } //Disallows col from going below 0.
             col--;
             return gameArea.children[row].children[col].innerHTML = "";
         } else if (content == 'enter') {
             //If 'enter' is clicked...
-            if (col != maxCol) { return; }
+            if (col != maxCol) { return; } //Disallows use if guess is incomplete.
             return submitGuess(collectGuess());
         } else {
             return;
