@@ -11,6 +11,8 @@ document.getElementById('menu').onclick = function () {
 //GAME ELEMENTS:
 //Starts the game...
 const startGame = () => {
+    document.getElementById('start').removeEventListener("click", startGame);
+
     //Function to generate new word...
     const makeWord = (length) => {
         const alphabet = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
@@ -61,11 +63,20 @@ const startGame = () => {
         console.log(`The current word to guess is ${word.join("")}!`);
         if (guess.join("") == word.join("")) {
             document.getElementById('keyboard').removeEventListener("click", typeArea);
+            document.getElementById('start').addEventListener("click", startGame);
             return console.log("You won!");
         } else {
             row++;
             col = 0;
             return console.log("Try again!");
+        }
+    }
+
+    //Function to change the style of the tiles...
+    const changeColor = (num) => {
+        const gameRow = document.getElementById('game-grid').children[row];
+        if (guess[num] == word[num]) {
+            gameRow.children[num].style.backgroundColor = 'red';
         }
     }
 
