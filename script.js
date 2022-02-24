@@ -11,7 +11,18 @@ document.getElementById('menu').onclick = function () {
 //GAME ELEMENTS:
 //Starts the game...
 const startGame = () => {
-    document.getElementById('start').removeEventListener("click", startGame);
+    //document.getElementById('start').removeEventListener("click", startGame);
+
+    //Function to reset the game...
+    const resetGame = () => {
+        for (let i = 0; i < maxRow; i++) {
+            for (let j = 0; j < maxCol; j++) {
+                document.getElementById('game-grid').children[i].children[j].innerHTML = "";
+            }
+        }
+        row = 0;
+        col = 0;
+    }
 
     //Function to generate new word...
     const makeWord = (length) => {
@@ -61,6 +72,7 @@ const startGame = () => {
     const submitGuess = (guess) => {
         console.log(`Hello! The current guess is ${guess.join("")}!`);
         console.log(`The current word to guess is ${word.join("")}!`);
+        editBackground(guess, word);
         if (guess.join("") == word.join("")) {
             document.getElementById('keyboard').removeEventListener("click", typeArea);
             document.getElementById('start').addEventListener("click", startGame);
@@ -72,12 +84,33 @@ const startGame = () => {
         }
     }
 
+    //Function for editing styles on guess...
+    const editBackground = (guess, word) => {
+        const correct = "green";
+        const incorrect = "gray";
+        const isInWord = "orange";
+        const currentRow = document.getElementById('game-grid').children[row];
+
+        const containsLetter = (guess, word) => {
+            for (let i = 0; i < guess.length; i++) {
+                for (let j = 0; j < word.length; j++) {
+                    if (guess[i] == word[j]) { return true; }
+                }
+            }
+        }
+    }
+
     //Game Variables:
     let col = 0;
     let row = 0;
     let maxCol = 5;
     let maxRow = 6;
-    let word = makeWord(maxCol); //Generates and stores a random word.
+
+    //Resets the game grid...
+    resetGame();
+
+    //Generates a new word...
+    let word = makeWord(maxCol);
 
     //Enables the keyboard...
     document.getElementById('keyboard').addEventListener("click", typeArea);
